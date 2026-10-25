@@ -1,0 +1,6 @@
+{
+  "name": "Bài 1: Rút ngắn khoảng cách từ quyết sách đến thực tiễn | E-Magazine Special",
+  "description": "E-Magazine Special Longform: Rút ngắn khoảng cách từ quyết sách đến thực tiễn - Từ kỳ tích 100 ngày đêm xây 108 trường học vùng biên đến nghị quyết thuế thần tốc 20 ngày.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
