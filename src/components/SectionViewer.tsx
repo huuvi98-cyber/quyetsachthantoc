@@ -32,16 +32,12 @@ export const SectionViewer: React.FC<SectionViewerProps> = ({
 
   const section2GalleryImages = [
     { src: "/assets/aistudio/IMG_8322_69aa4724.JPG", title: "Hoạt động tháo gỡ vướng mắc 1" },
-    { src: "/assets/aistudio/IMG_0933_a7bd1698.JPG", title: "Hoạt động tháo gỡ vướng mắc 2" },
-    { src: "/assets/aistudio/IMG_1205_e16aff56.JPG", title: "Hoạt động tháo gỡ vướng mắc 3" },
-    { src: "/assets/aistudio/IMG_1293_6bd0c6b9.JPG", title: "Hoạt động tháo gỡ vướng mắc 4" }
+    { src: "/assets/aistudio/IMG_0933_a7bd1698.JPG", title: "Hoạt động tháo gỡ vướng mắc 2" }
   ];
 
   const section4GalleryImages = [
     { src: "/assets/aistudio/IMG_0775_66e51848.JPG", title: "Học sinh hân hoan dự lễ khai giảng năm học mới" },
-    { src: "/assets/aistudio/IMG_8308_e7a7178e.jpg", title: "Toàn cảnh khuôn viên trường PTNT Mường Khương khang trang" },
-    { src: "/assets/aistudio/IMG_8323_5516986f.jpg", title: "Lãnh đạo và các đại biểu chụp ảnh lưu niệm cùng thầy cô và học sinh" },
-    { src: "/assets/aistudio/IMG_0546_b3efce36.JPG", title: "Trường học mới khang trang tựa lưng núi rừng biên cương" }
+    { src: "/assets/aistudio/IMG_8308_e7a7178e.jpg", title: "Toàn cảnh khuôn viên trường PTNT Mường Khương khang trang" }
   ];
 
   return (
@@ -86,31 +82,7 @@ export const SectionViewer: React.FC<SectionViewerProps> = ({
                   {para}
                 </p>
 
-                {/* Inject Full-Bleed Press Photo after paragraph 1 (idx === 0) in section-1 ("đưa đón con hàng ngày") */}
-                {section.id === 'section-1' && idx === 0 && (
-                  <figure className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen my-10 bg-stone-900 shadow-md overflow-hidden">
-                    <div 
-                      className="w-full cursor-pointer"
-                      onClick={() => setActiveModalImg('/assets/aistudio/2-2529-9760.jpg_cfcc0ada.jpg')}
-                    >
-                      <img
-                        src="/assets/aistudio/2-2529-9760.jpg_cfcc0ada.jpg"
-                        alt="Thủ tướng Lê Minh Hưng và các đại biểu dự lễ khai giảng năm học 2026-2027 tại Lào Cai"
-                        className="w-full h-auto object-cover max-h-[85vh] border-0 p-0 m-0 rounded-none block"
-                      />
-                    </div>
-                    <figcaption className="bg-white dark:bg-stone-900 text-stone-900 dark:text-stone-100 border-t border-stone-200 dark:border-stone-800 p-3.5 sm:p-4">
-                      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-xs font-body-serif italic">
-                        <div className="flex items-center gap-2">
-                          <span>Thủ tướng Lê Minh Hưng và các đại biểu dự lễ khai giảng năm học 2026-2027 tại Lào Cai, sáng 5-9.</span>
-                        </div>
-                        <span className="font-sans-ui text-[11px] font-light text-stone-500 dark:text-stone-400 shrink-0 not-italic">
-                          Ảnh: VIẾT CHUNG
-                        </span>
-                      </div>
-                    </figcaption>
-                  </figure>
-                )}
+
 
                 {/* Inject Full-Screen Muong Khuong school image after paragraph 2 (idx === 1) in section-1 */}
                 {section.id === 'section-1' && idx === 1 && (
@@ -159,41 +131,40 @@ export const SectionViewer: React.FC<SectionViewerProps> = ({
                   </div>
                 )}
 
-
-
-                {/* Inject 2-row image grid under paragraph index 2 (3rd paragraph) in section-2 */}
-                {section.id === 'section-2' && idx === 2 && (
-                  <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen py-6 sm:py-10 my-10 bg-white dark:bg-stone-900 transition-colors overflow-visible">
-                    <div className="w-full px-2 sm:px-4 md:px-8">
-                      <div className="grid grid-cols-2 gap-3 sm:gap-6 relative z-10 py-2">
-                        {section2GalleryImages.map((img, imgIdx) => {
-                          const isScaled = s2ScaledImgIdx === imgIdx;
-
-                          return (
-                            <div 
-                              key={imgIdx} 
-                              onClick={() => setActiveModalImg(img.src)}
-                              onMouseEnter={() => setS2ScaledImgIdx(imgIdx)}
-                              onMouseLeave={() => setS2ScaledImgIdx(null)}
-                              className={`relative overflow-hidden rounded-2xl transition-all duration-300 ease-out cursor-pointer aspect-4/3 bg-stone-100 dark:bg-stone-800 ${
-                                isScaled 
-                                  ? 'scale-[1.3] z-30 shadow-2xl ring-0' 
-                                  : 'scale-100 shadow-none'
-                              }`}
-                            >
-                              <img 
-                                src={img.src} 
-                                alt={img.title} 
-                                className="w-full h-full object-cover border-0"
-                                loading="lazy"
-                              />
-                            </div>
-                          );
-                        })}
-                      </div>
+                {/* Inject 3-Image Cluster for Section 2 after paragraph 2 (idx === 1) */}
+                {section.id === 'section-2' && idx === 1 && (
+                  <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen my-12 px-4 sm:px-8 md:px-12 space-y-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 py-2 max-w-[1600px] mx-auto">
+                      {[
+                        { src: "/assets/aistudio/KT-XH-1_d7162d64.jpg", alt: "Nhân viên Công ty TNHH MTV Suất ăn Công nghiệp Tú Anh, phường Bình Tân, TPHCM" },
+                        { src: "/assets/aistudio/KT-XH-2_ba054ef8.jpg", alt: "Công nhân sản xuất sản phẩm may mặc tại nhà máy VitaJeans, TPHCM" },
+                        { src: "/assets/aistudio/KT-XH-3_3981d7b8.jpg", alt: "Công nhân Công ty TNHH Sản xuất Thương mại Cát Thái tại Khu Công nghệ cao, TPHCM" }
+                      ].map((img, imgIdx) => (
+                        <div 
+                          key={imgIdx}
+                          onClick={() => setActiveModalImg(img.src)}
+                          className="relative overflow-hidden rounded-xl sm:rounded-2xl aspect-4/3 bg-stone-100 dark:bg-stone-800 transition-all duration-300 ease-out hover:scale-[1.25] hover:z-30 hover:shadow-2xl cursor-pointer ring-1 ring-stone-200/80 dark:ring-stone-800"
+                        >
+                          <img 
+                            src={img.src} 
+                            alt={img.alt} 
+                            className="w-full h-full object-cover border-0"
+                            loading="lazy"
+                          />
+                        </div>
+                      ))}
+                    </div>
+                    <div className="bg-white dark:bg-stone-900 py-3.5 px-4 text-center rounded-xl border border-stone-200 dark:border-stone-800 max-w-4xl mx-auto shadow-xs">
+                      <p className="font-sans-ui text-xs sm:text-sm text-stone-600 dark:text-stone-300 italic tracking-wide">
+                        Từ trái qua: Nhân viên Công ty TNHH MTV Suất ăn Công nghiệp Tú Anh, phường Bình Tân, TPHCM; Công nhân sản xuất sản phẩm may mặc tại nhà máy VitaJeans (Công ty TNHH Việt Thắng Jean), TPHCM; Công nhân Công ty TNHH Sản xuất Thương mại Cát Thái sản xuất chi tiết phụ trợ tại Khu Công nghệ cao, phường Long Phước, TPHCM. <span className="not-italic font-sans-ui text-[11px] font-medium text-stone-500 dark:text-stone-400 uppercase">ẢNH: HOÀNG HÙNG</span>
+                      </p>
                     </div>
                   </div>
                 )}
+
+
+
+
 
                 {/* Inject Quote Boxes for Tran Ngoc Lam and Nguyen Van Than after paragraph 4 (idx === 3) in section-3 */}
                 {section.id === 'section-3' && idx === 3 && (
@@ -246,52 +217,23 @@ export const SectionViewer: React.FC<SectionViewerProps> = ({
                   </div>
                 )}
 
-                {/* Inject 2-row image grid under paragraph index 2 (idx === 2) in section-4 */}
-                {section.id === 'section-4' && idx === 2 && (
-                  <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen py-6 sm:py-10 my-10 bg-white dark:bg-stone-900 transition-colors overflow-visible">
-                    <div className="w-full px-2 sm:px-4 md:px-8">
-                      <div className="grid grid-cols-1 sm:grid-cols-12 gap-3 sm:gap-6 relative z-10 py-2">
-                        {section4GalleryImages.map((img, imgIdx) => {
-                          const isScaled = s2ScaledImgIdx === imgIdx + 10;
-                          
-                          let colSpanClass = "sm:col-span-6";
-                          let aspectClass = "aspect-4/3";
-                          
-                          if (imgIdx === 2) {
-                            // Left image reduced by ~20% in width (7 cols instead of 9)
-                            colSpanClass = "sm:col-span-7 lg:col-span-7";
-                            aspectClass = "aspect-16/10";
-                          } else if (imgIdx === 3) {
-                            // Right image takes remaining 5 columns
-                            colSpanClass = "sm:col-span-5 lg:col-span-5";
-                            aspectClass = "aspect-16/10";
-                          }
-
-                          return (
-                            <div 
-                              key={imgIdx} 
-                              onClick={() => setActiveModalImg(img.src)}
-                              onMouseEnter={() => setS2ScaledImgIdx(imgIdx + 10)}
-                              onMouseLeave={() => setS2ScaledImgIdx(null)}
-                              className={`relative overflow-hidden rounded-2xl transition-all duration-300 ease-out cursor-pointer bg-stone-100 dark:bg-stone-800 ${colSpanClass} ${aspectClass} ${
-                                isScaled 
-                                  ? 'scale-[1.3] z-30 shadow-2xl ring-0' 
-                                  : 'scale-100 shadow-none'
-                              }`}
-                            >
-                              <img 
-                                src={img.src} 
-                                alt={img.title} 
-                                className="w-full h-full object-cover object-center border-0"
-                                loading="lazy"
-                              />
-                            </div>
-                          );
-                        })}
-                      </div>
+                {/* Inject single full-bleed image after paragraph 1 (idx === 0) in section-4 under "...đền ơn, đáp nghĩa!" */}
+                {section.id === 'section-4' && idx === 0 && (
+                  <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen my-10 overflow-hidden border-0">
+                    <div 
+                      className="w-full cursor-pointer"
+                      onClick={() => setActiveModalImg('/assets/aistudio/Cvien_LeThirieng_30146db4.jpg')}
+                    >
+                      <img 
+                        src="/assets/aistudio/Cvien_LeThirieng_30146db4.jpg" 
+                        alt="Các hoạt động trong chiến dịch đền ơn, đáp nghĩa" 
+                        className="w-full h-auto max-h-[85vh] object-cover border-0 p-0 m-0 rounded-none block"
+                      />
                     </div>
                   </div>
                 )}
+
+
 
 
                 {/* Inject 4 Horizontal Full Background Images directly above 'Với mệnh lệnh...' paragraph (idx === 2) in section-1 */}

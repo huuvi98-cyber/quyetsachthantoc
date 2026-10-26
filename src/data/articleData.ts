@@ -96,7 +96,7 @@ export const ARTICLE_DATA: ArticleData = {
       id: "section-2",
       number: "02",
       title: "20 NGÀY THẦN TỐC\nGỠ ĐIỂM NGHẼN, GIẢM THUẾ",
-      stitBgImage: "/assets/aistudio/Bai_1-stit-2_259d4c16.jpg",
+      stitBgImage: "/assets/aistudio/Bai_1-stit-2_60f76a52.jpg",
       align: "right",
       paragraphs: [
         "Nếu chiến dịch xây trường vùng biên là minh chứng cho năng lực tổ chức thực thi, thì trên mặt trận kinh tế, thực tiễn thời gian qua đã khẳng định, để “đường chạy” thông suốt, thể chế phải chủ động đi trước mở đường. Hành trình của một chính sách giờ đây đã thoát khỏi trạng thái “chờ đúng quy trình” để vận hành nhanh chóng và tường minh hơn, giải quyết kịp thời những đòi hỏi bức thiết từ cuộc sống.",
