@@ -4,7 +4,7 @@ import { SectionData } from '../data/articleData';
 import { Infographics } from './Infographics';
 import { GraphicQuoteCard } from './GraphicQuoteCard';
 import { CoralGraphicQuote } from './CoralGraphicQuote';
-import regeneratedSchoolImg from '../assets/images/regenerated_image_1792977573188.jpg';
+import regeneratedSchoolImg from '../assets/images/regenerated_image_1792982551096.png';
 
 interface SectionViewerProps {
   section: SectionData;
@@ -27,7 +27,7 @@ export const SectionViewer: React.FC<SectionViewerProps> = ({
     { src: "/assets/aistudio/IMG_0996_abaadac7.JPG", title: "Học sinh tiểu học vùng biên" },
     { src: "/assets/aistudio/IMG_0966_cb44e500.JPG", title: "Các em học sinh rạng rỡ trong trang phục dân tộc" },
     { src: "/assets/aistudio/IMG_0700_b6c9db5a.JPG", title: "Học sinh hân hoan trên sân trường mới" },
-    { src: regeneratedSchoolImg, title: "Trường Phổ thông nội trú Mường Khương" }
+    { src: "/assets/aistudio/IMG_0636_7d66c869.JPG", title: "Các em học sinh" }
   ];
 
   const section2GalleryImages = [
@@ -86,15 +86,41 @@ export const SectionViewer: React.FC<SectionViewerProps> = ({
                   {para}
                 </p>
 
-                {/* Inject Full-Screen Muong Khuong school image after paragraph 1 (idx === 0) in section-1 */}
+                {/* Inject Full-Bleed Press Photo after paragraph 1 (idx === 0) in section-1 ("đưa đón con hàng ngày") */}
                 {section.id === 'section-1' && idx === 0 && (
+                  <figure className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen my-10 bg-stone-900 shadow-md overflow-hidden">
+                    <div 
+                      className="w-full cursor-pointer"
+                      onClick={() => setActiveModalImg('/assets/aistudio/2-2529-9760.jpg_cfcc0ada.jpg')}
+                    >
+                      <img
+                        src="/assets/aistudio/2-2529-9760.jpg_cfcc0ada.jpg"
+                        alt="Thủ tướng Lê Minh Hưng và các đại biểu dự lễ khai giảng năm học 2026-2027 tại Lào Cai"
+                        className="w-full h-auto object-cover max-h-[85vh] border-0 p-0 m-0 rounded-none block"
+                      />
+                    </div>
+                    <figcaption className="bg-white dark:bg-stone-900 text-stone-900 dark:text-stone-100 border-t border-stone-200 dark:border-stone-800 p-3.5 sm:p-4">
+                      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-xs font-body-serif italic">
+                        <div className="flex items-center gap-2">
+                          <span>Thủ tướng Lê Minh Hưng và các đại biểu dự lễ khai giảng năm học 2026-2027 tại Lào Cai, sáng 5-9.</span>
+                        </div>
+                        <span className="font-sans-ui text-[11px] font-light text-stone-500 dark:text-stone-400 shrink-0 not-italic">
+                          Ảnh: VIẾT CHUNG
+                        </span>
+                      </div>
+                    </figcaption>
+                  </figure>
+                )}
+
+                {/* Inject Full-Screen Muong Khuong school image after paragraph 2 (idx === 1) in section-1 */}
+                {section.id === 'section-1' && idx === 1 && (
                   <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen my-10 overflow-hidden border-0">
                     <div 
                       className="w-full cursor-pointer"
-                      onClick={() => setActiveModalImg(regeneratedSchoolImg)}
+                      onClick={() => setActiveModalImg("/assets/aistudio/IMG_0621.JPG")}
                     >
                       <img 
-                        src={regeneratedSchoolImg} 
+                        src="/assets/aistudio/IMG_0621.JPG" 
                         alt="Trường Phổ thông nội trú Tiểu học - THCS Mường Khương" 
                         className="w-full h-auto max-h-[85vh] object-cover border-0 p-0 m-0 rounded-none block"
                       />
