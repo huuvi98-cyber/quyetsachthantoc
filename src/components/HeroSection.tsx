@@ -83,7 +83,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               <div 
                 key={imgIdx}
                 onClick={() => setActiveModalImg(img.src)}
-                className="relative overflow-hidden rounded-xl sm:rounded-2xl aspect-4/3 bg-stone-100 dark:bg-stone-800 transition-all duration-300 ease-out hover:scale-[1.25] hover:z-30 hover:shadow-2xl cursor-pointer ring-1 ring-stone-200/80 dark:ring-stone-800"
+                className="relative overflow-hidden rounded-xl sm:rounded-2xl aspect-4/3 bg-stone-100 dark:bg-stone-800 transition-all duration-300 ease-out hover:scale-[1.25] hover:z-30 hover:shadow-2xl pointer-events-none md:cursor-pointer md:pointer-events-auto ring-1 ring-stone-200/80 dark:ring-stone-800"
               >
                 <img 
                   src={img.src} 
@@ -113,10 +113,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       {/* Full-Screen Image Modal */}
       {activeModalImg && (
         <div 
-          className="fixed inset-0 z-[100] bg-white flex justify-center p-2 sm:p-6 overflow-y-auto"
+          className="fixed inset-0 z-[100] bg-white flex items-center justify-center p-2 sm:p-6"
           onClick={() => setActiveModalImg(null)}
         >
-          <div className="relative w-full max-w-7xl pt-16">
+          <div className="relative w-full max-w-7xl">
             <button 
               onClick={() => setActiveModalImg(null)}
               className="fixed top-4 right-4 p-3 rounded-full bg-stone-200 text-stone-800 hover:bg-stone-300 transition-colors z-20 border-0"
@@ -127,7 +127,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             <img 
               src={activeModalImg} 
               alt="Enlarged view" 
-              className="w-full h-auto object-contain border-0 shadow-none rounded-none"
+              className="w-full max-h-[90vh] object-contain border-0 shadow-none rounded-none"
             />
           </div>
         </div>

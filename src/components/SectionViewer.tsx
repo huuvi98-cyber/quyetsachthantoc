@@ -88,7 +88,7 @@ export const SectionViewer: React.FC<SectionViewerProps> = ({
                 {section.id === 'section-1' && idx === 1 && (
                   <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen my-10 overflow-hidden border-0">
                     <div 
-                      className="w-full cursor-pointer"
+                      className="w-full pointer-events-none md:cursor-pointer md:pointer-events-auto"
                       onClick={() => setActiveModalImg("/assets/aistudio/IMG_0621.JPG")}
                     >
                       <img 
@@ -114,7 +114,7 @@ export const SectionViewer: React.FC<SectionViewerProps> = ({
                 {section.id === 'section-3' && idx === 1 && (
                   <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen my-10 overflow-hidden border-0">
                     <div 
-                      className="w-full cursor-pointer"
+                      className="w-full pointer-events-none md:cursor-pointer md:pointer-events-auto"
                       onClick={() => setActiveModalImg('/assets/aistudio/TPHCM._a_nh_HOA_NG_TRIE__U_27_d05b6e65.jpg')}
                     >
                       <img 
@@ -143,7 +143,7 @@ export const SectionViewer: React.FC<SectionViewerProps> = ({
                         <div 
                           key={imgIdx}
                           onClick={() => setActiveModalImg(img.src)}
-                          className="relative overflow-hidden rounded-xl sm:rounded-2xl aspect-4/3 bg-stone-100 dark:bg-stone-800 transition-all duration-300 ease-out hover:scale-[1.25] hover:z-30 hover:shadow-2xl cursor-pointer ring-1 ring-stone-200/80 dark:ring-stone-800"
+                          className="relative overflow-hidden rounded-xl sm:rounded-2xl aspect-4/3 bg-stone-100 dark:bg-stone-800 transition-all duration-300 ease-out hover:scale-[1.25] hover:z-30 hover:shadow-2xl pointer-events-none md:cursor-pointer md:pointer-events-auto ring-1 ring-stone-200/80 dark:ring-stone-800"
                         >
                           <img 
                             src={img.src} 
@@ -217,7 +217,7 @@ export const SectionViewer: React.FC<SectionViewerProps> = ({
                 {section.id === 'section-4' && idx === 0 && (
                   <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen my-10 overflow-hidden border-0">
                     <div 
-                      className="w-full cursor-pointer"
+                      className="w-full pointer-events-none md:cursor-pointer md:pointer-events-auto"
                       onClick={() => setActiveModalImg('/assets/aistudio/Cvien_LeThirieng_30146db4.jpg')}
                     >
                       <img 
@@ -246,7 +246,7 @@ export const SectionViewer: React.FC<SectionViewerProps> = ({
                               onClick={() => setActiveModalImg(img.src)}
                               onMouseEnter={() => setScaledImgIdx(imgIdx)}
                               onMouseLeave={() => setScaledImgIdx(null)}
-                              className={`relative overflow-hidden rounded-2xl transition-all duration-300 ease-out cursor-pointer aspect-4/3 ${
+                              className={`relative overflow-hidden rounded-2xl transition-all duration-300 ease-out pointer-events-none md:cursor-pointer md:pointer-events-auto aspect-4/3 ${
                                 isScaled 
                                   ? 'scale-[1.3] z-30 shadow-2xl ring-2 ring-stone-300/50' 
                                   : 'scale-100 shadow-xs'
@@ -289,10 +289,10 @@ export const SectionViewer: React.FC<SectionViewerProps> = ({
         {/* Modal Viewer for Full Size Image */}
         {activeModalImg && (
           <div 
-            className="fixed inset-0 z-[100] bg-white flex justify-center p-2 sm:p-6 overflow-y-auto"
+            className="fixed inset-0 z-[100] bg-white flex items-center justify-center p-2 sm:p-6"
             onClick={() => setActiveModalImg(null)}
           >
-            <div className="relative w-full max-w-7xl pt-16">
+            <div className="relative w-full max-w-7xl">
               <button 
                 onClick={() => setActiveModalImg(null)}
                 className="fixed top-4 right-4 p-3 rounded-full bg-stone-200 text-stone-800 hover:bg-stone-300 transition-colors z-20 border-0"
@@ -303,7 +303,7 @@ export const SectionViewer: React.FC<SectionViewerProps> = ({
               <img 
                 src={activeModalImg} 
                 alt="Enlarged view" 
-                className="w-full h-auto object-contain border-0 shadow-none rounded-none"
+                className="w-full max-h-[90vh] object-contain border-0 shadow-none rounded-none"
               />
             </div>
           </div>
