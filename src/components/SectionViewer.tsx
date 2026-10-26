@@ -236,7 +236,7 @@ export const SectionViewer: React.FC<SectionViewerProps> = ({
                 {section.id === 'section-1' && idx === 2 && (
                   <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen py-8 sm:py-12 my-10 bg-white dark:bg-stone-900 transition-colors overflow-visible">
                     <div className="w-full px-2 sm:px-4 md:px-8">
-                      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-6 relative z-10 py-4">
+                      <div className="grid grid-cols-1 sm:grid-cols-4 gap-3 sm:gap-6 relative z-10 py-4">
                         {section1GalleryImages.map((img, imgIdx) => {
                           const isScaled = scaledImgIdx === imgIdx;
 
