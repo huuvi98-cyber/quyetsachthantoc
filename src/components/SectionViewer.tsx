@@ -4,6 +4,7 @@ import { SectionData } from '../data/articleData';
 import { Infographics } from './Infographics';
 import { GraphicQuoteCard } from './GraphicQuoteCard';
 import { CoralGraphicQuote } from './CoralGraphicQuote';
+import regeneratedSchoolImg from '../assets/images/regenerated_image_1792977573188.jpg';
 
 interface SectionViewerProps {
   section: SectionData;
@@ -26,7 +27,7 @@ export const SectionViewer: React.FC<SectionViewerProps> = ({
     { src: "/assets/aistudio/IMG_0996_abaadac7.JPG", title: "Học sinh tiểu học vùng biên" },
     { src: "/assets/aistudio/IMG_0966_cb44e500.JPG", title: "Các em học sinh rạng rỡ trong trang phục dân tộc" },
     { src: "/assets/aistudio/IMG_0700_b6c9db5a.JPG", title: "Học sinh hân hoan trên sân trường mới" },
-    { src: "/assets/aistudio/IMG_0636_7d66c869.JPG", title: "Niềm vui năm học mới 2026-2027" }
+    { src: regeneratedSchoolImg, title: "Trường Phổ thông nội trú Mường Khương" }
   ];
 
   const section2GalleryImages = [
@@ -49,14 +50,22 @@ export const SectionViewer: React.FC<SectionViewerProps> = ({
         
         {/* Section Header Banner with Background Image */}
         <div 
-          className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen py-14 sm:py-20 mb-12 shadow-md bg-cover bg-center overflow-hidden"
-          style={{ backgroundImage: `url(${section.stitBgImage || section.headerImage?.src})` }}
+          className={`relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen ${
+            section.id === 'section-4' ? 'py-4 my-8 bg-transparent shadow-none' : 'py-10 sm:py-14 mb-12 shadow-md bg-cover bg-center overflow-hidden'
+          }`}
+          style={section.id === 'section-4' ? {} : { backgroundImage: `url(${section.stitBgImage || section.headerImage?.src})` }}
         >
           {/* Subtle dark overlay for contrast */}
-          <div className="absolute inset-0 bg-black/35 dark:bg-black/50" />
+          {section.id !== 'section-4' && (
+            <div className="absolute inset-0 bg-black/35 dark:bg-black/50" />
+          )}
 
           <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className={`font-sans-ui font-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white leading-[1.38] sm:leading-[1.4] tracking-tight drop-shadow-md uppercase ${section.align === 'right' ? 'text-right' : section.align === 'center' ? 'text-center' : 'text-left'}`}>
+            <h2 className={`font-sans-ui text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-[1.38] sm:leading-[1.4] tracking-tight uppercase ${
+              section.id === 'section-4' 
+                ? 'text-red-700 dark:text-red-500 not-italic font-semibold border-l-4 border-red-700 dark:border-red-500 pl-4 sm:pl-6 drop-shadow-none' 
+                : 'text-white font-black drop-shadow-md'
+            } ${section.align === 'right' ? 'text-right' : section.align === 'center' ? 'text-center' : 'text-left'}`}>
               {section.title.split('\n').map((line, idx) => (
                 <span key={idx} className="block py-1">
                   {line}
@@ -73,12 +82,33 @@ export const SectionViewer: React.FC<SectionViewerProps> = ({
             return (
               <React.Fragment key={idx}>
                 {/* Paragraph Text */}
-                <p className={`${fontSizeClass} leading-[1.8] text-stone-800 dark:text-stone-200`}>
+                <p className={`${fontSizeClass} leading-[1.8] text-stone-800 dark:text-stone-200 ${section.id === 'section-4' ? 'italic' : ''}`}>
                   {para}
                 </p>
 
-                {/* Inject Coral Graphic Quote for General Secretary, President To Lam in section-3 after paragraph 1 */}
-                {section.id === 'section-3' && idx === 0 && (
+                {/* Inject Full-Screen Muong Khuong school image after paragraph 1 (idx === 0) in section-1 */}
+                {section.id === 'section-1' && idx === 0 && (
+                  <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen my-10 overflow-hidden border-0">
+                    <div 
+                      className="w-full cursor-pointer"
+                      onClick={() => setActiveModalImg(regeneratedSchoolImg)}
+                    >
+                      <img 
+                        src={regeneratedSchoolImg} 
+                        alt="Trường Phổ thông nội trú Tiểu học - THCS Mường Khương" 
+                        className="w-full h-auto max-h-[85vh] object-cover border-0 p-0 m-0 rounded-none block"
+                      />
+                    </div>
+                    <div className="bg-stone-100/80 dark:bg-stone-900 py-3.5 px-4 text-center border-0">
+                      <p className="font-sans-ui text-xs sm:text-sm text-stone-600 dark:text-stone-300 italic tracking-wide max-w-4xl mx-auto px-4">
+                        Trường Phổ thông nội trú Tiểu học - THCS Mường Khương là một trong 107 trường nội trú liên cấp ở biên giới được đưa vào hoạt động từ năm học 2026-2027. Ảnh: NGUYỄN MẠNH
+                      </p>
+                    </div>
+                  </div>
+                )}
+
+                {/* Inject Coral Graphic Quote for General Secretary, President To Lam in section-1 after paragraph 5 */}
+                {section.id === 'section-1' && idx === 4 && (
                   <CoralGraphicQuote />
                 )}
 
@@ -103,14 +133,7 @@ export const SectionViewer: React.FC<SectionViewerProps> = ({
                   </div>
                 )}
 
-                {/* Inject Quote 1 after specific paragraph index */}
-                {idx === 1 && section.quotes && (
-                  <GraphicQuoteCard
-                    quote={section.id === 'section-3' ? (section.quotes.find(q => q.author.includes('Trần Lưu Quang')) || section.quotes[1]) : section.quotes[0]}
-                    variant={section.id === 'section-1' ? 'yellow' : section.id === 'section-2' ? 'lime' : 'amber'}
-                    onBookmarkQuote={onBookmarkQuote}
-                  />
-                )}
+
 
                 {/* Inject 2-row image grid under paragraph index 2 (3rd paragraph) in section-2 */}
                 {section.id === 'section-2' && idx === 2 && (
@@ -201,9 +224,22 @@ export const SectionViewer: React.FC<SectionViewerProps> = ({
                 {section.id === 'section-4' && idx === 2 && (
                   <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen py-6 sm:py-10 my-10 bg-white dark:bg-stone-900 transition-colors overflow-visible">
                     <div className="w-full px-2 sm:px-4 md:px-8">
-                      <div className="grid grid-cols-2 gap-3 sm:gap-6 relative z-10 py-2">
+                      <div className="grid grid-cols-1 sm:grid-cols-12 gap-3 sm:gap-6 relative z-10 py-2">
                         {section4GalleryImages.map((img, imgIdx) => {
                           const isScaled = s2ScaledImgIdx === imgIdx + 10;
+                          
+                          let colSpanClass = "sm:col-span-6";
+                          let aspectClass = "aspect-4/3";
+                          
+                          if (imgIdx === 2) {
+                            // Left image reduced by ~20% in width (7 cols instead of 9)
+                            colSpanClass = "sm:col-span-7 lg:col-span-7";
+                            aspectClass = "aspect-16/10";
+                          } else if (imgIdx === 3) {
+                            // Right image takes remaining 5 columns
+                            colSpanClass = "sm:col-span-5 lg:col-span-5";
+                            aspectClass = "aspect-16/10";
+                          }
 
                           return (
                             <div 
@@ -211,7 +247,7 @@ export const SectionViewer: React.FC<SectionViewerProps> = ({
                               onClick={() => setActiveModalImg(img.src)}
                               onMouseEnter={() => setS2ScaledImgIdx(imgIdx + 10)}
                               onMouseLeave={() => setS2ScaledImgIdx(null)}
-                              className={`relative overflow-hidden rounded-2xl transition-all duration-300 ease-out cursor-pointer aspect-4/3 bg-stone-100 dark:bg-stone-800 ${
+                              className={`relative overflow-hidden rounded-2xl transition-all duration-300 ease-out cursor-pointer bg-stone-100 dark:bg-stone-800 ${colSpanClass} ${aspectClass} ${
                                 isScaled 
                                   ? 'scale-[1.3] z-30 shadow-2xl ring-0' 
                                   : 'scale-100 shadow-none'
@@ -220,7 +256,7 @@ export const SectionViewer: React.FC<SectionViewerProps> = ({
                               <img 
                                 src={img.src} 
                                 alt={img.title} 
-                                className="w-full h-full object-cover border-0"
+                                className="w-full h-full object-cover object-center border-0"
                                 loading="lazy"
                               />
                             </div>
@@ -232,8 +268,8 @@ export const SectionViewer: React.FC<SectionViewerProps> = ({
                 )}
 
 
-                {/* Inject 4 Horizontal Full Background Images directly under text index 4 in section-1 */}
-                {section.id === 'section-1' && idx === 4 && (
+                {/* Inject 4 Horizontal Full Background Images directly above 'Với mệnh lệnh...' paragraph (idx === 2) in section-1 */}
+                {section.id === 'section-1' && idx === 2 && (
                   <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen py-8 sm:py-12 my-10 bg-white dark:bg-stone-900 transition-colors overflow-visible">
                     <div className="w-full px-2 sm:px-4 md:px-8">
                       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-6 relative z-10 py-4">
@@ -266,8 +302,8 @@ export const SectionViewer: React.FC<SectionViewerProps> = ({
                   </div>
                 )}
 
-                {/* Inject Section Infographic after paragraph index 4 (Only for section-2) */}
-                {idx === 4 && section.id === 'section-2' && (
+                {/* Inject Section Infographic after last paragraph of section-2 */}
+                {idx === section.paragraphs.length - 1 && section.id === 'section-2' && (
                   <Infographics type="section-2" theme={theme} />
                 )}
 

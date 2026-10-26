@@ -41,7 +41,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
         {/* Article Main Headline & Series Title */}
         <div className="space-y-3 mb-12">
-          <div className="inline-block text-xs sm:text-sm font-sans-ui font-extrabold tracking-wider text-red-900 dark:text-red-300 uppercase bg-red-100/90 dark:bg-red-950/80 px-4 py-2 rounded-md border border-red-300/80 dark:border-red-800/80 shadow-2xs">
+          <div className="text-base sm:text-lg font-sans-ui font-extrabold tracking-wider text-red-900 dark:text-red-400 uppercase pb-2.5 border-b border-stone-300 dark:border-stone-800">
             {ARTICLE_DATA.seriesTitle}
           </div>
 

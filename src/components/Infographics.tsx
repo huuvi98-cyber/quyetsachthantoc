@@ -3,6 +3,7 @@ import {
   School, Building2, Calendar, CheckCircle2, Award, 
   ShieldCheck, Users, FileText, Send, TrendingUp 
 } from 'lucide-react';
+import { ProjectUnblockingInfographic } from './ProjectUnblockingInfographic';
 
 interface InfographicProps {
   type: 'section-1' | 'section-2' | 'section-3';
@@ -349,6 +350,11 @@ export const Infographics: React.FC<InfographicProps> = ({ type, theme }) => {
                 );
               })}
             </div>
+          </div>
+
+          {/* COLORFUL INFOGRAPHIC WITH ANIMATED NUMBERS DIRECTLY BELOW TIMELINE */}
+          <div className="mt-8">
+            <ProjectUnblockingInfographic theme={theme} />
           </div>
 
         </div>
