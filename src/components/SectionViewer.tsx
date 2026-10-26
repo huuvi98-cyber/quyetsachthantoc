@@ -125,7 +125,7 @@ export const SectionViewer: React.FC<SectionViewerProps> = ({
                     </div>
                     <div className="bg-white dark:bg-stone-900 py-3.5 px-4 text-center border-0">
                       <p className="font-sans-ui text-xs sm:text-sm text-stone-600 dark:text-stone-300 italic tracking-wide">
-                        TPHCM. Ảnh: HOÀNG TRIỀU
+                        Ảnh: HOÀNG TRIỀU
                       </p>
                     </div>
                   </div>
@@ -154,11 +154,7 @@ export const SectionViewer: React.FC<SectionViewerProps> = ({
                         </div>
                       ))}
                     </div>
-                    <div className="bg-white dark:bg-stone-900 py-3.5 px-4 text-center rounded-xl border border-stone-200 dark:border-stone-800 max-w-4xl mx-auto shadow-xs">
-                      <p className="font-sans-ui text-xs sm:text-sm text-stone-600 dark:text-stone-300 italic tracking-wide">
-                        Từ trái qua: Nhân viên Công ty TNHH MTV Suất ăn Công nghiệp Tú Anh, phường Bình Tân, TPHCM; Công nhân sản xuất sản phẩm may mặc tại nhà máy VitaJeans (Công ty TNHH Việt Thắng Jean), TPHCM; Công nhân Công ty TNHH Sản xuất Thương mại Cát Thái sản xuất chi tiết phụ trợ tại Khu Công nghệ cao, phường Long Phước, TPHCM. <span className="not-italic font-sans-ui text-[11px] font-medium text-stone-500 dark:text-stone-400 uppercase">ẢNH: HOÀNG HÙNG</span>
-                      </p>
-                    </div>
+                    {/* No caption for Section 2 cluster */}
                   </div>
                 )}
 

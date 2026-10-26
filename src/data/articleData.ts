@@ -96,7 +96,7 @@ export const ARTICLE_DATA: ArticleData = {
       id: "section-2",
       number: "02",
       title: "20 NGÀY THẦN TỐC\nGỠ ĐIỂM NGHẼN, GIẢM THUẾ",
-      stitBgImage: "/assets/aistudio/Bai_1-stit-2_60f76a52.jpg",
+      stitBgImage: "/assets/aistudio/Bai_1-stit-2_9edd8724.jpg",
       align: "right",
       paragraphs: [
         "Nếu chiến dịch xây trường vùng biên là minh chứng cho năng lực tổ chức thực thi, thì trên mặt trận kinh tế, thực tiễn thời gian qua đã khẳng định, để “đường chạy” thông suốt, thể chế phải chủ động đi trước mở đường. Hành trình của một chính sách giờ đây đã thoát khỏi trạng thái “chờ đúng quy trình” để vận hành nhanh chóng và tường minh hơn, giải quyết kịp thời những đòi hỏi bức thiết từ cuộc sống.",
@@ -127,7 +127,7 @@ export const ARTICLE_DATA: ArticleData = {
       id: "section-3",
       number: "03",
       title: "CHỦ ĐỘNG XÓA\n“ĐỘ TRỄ” THỰC THI",
-      stitBgImage: "/assets/aistudio/Bai_1-stit-3_9935be98.jpg",
+      stitBgImage: "/assets/aistudio/Bai_1-stit-3_0b13044c.jpg",
       paragraphs: [
         "Song hành cùng quyết sách từ Trung ương, tinh thần “thể chế đi trước để mở đường” đang thẩm thấu sâu sắc, tạo thành xung lực hành động đồng bộ tại nhiều địa phương trên cả nước, theo hướng: cởi trói thủ tục để hành động nhanh hơn, hiệu quả hơn.",
         "Tại TPHCM, khoảng cách từ lúc tiếp nhận nghị quyết của Đảng đến khi bắt tay vào hành động thực tiễn đang được rút ngắn tối đa. Chỉ đúng một tuần sau hội nghị toàn quốc, ngày 7-8, Thành ủy TPHCM đã lập tức tổ chức hội nghị quán triệt, triển khai Nghị quyết Hội nghị Trung ương 3 để bàn thảo những đầu việc cụ thể. Phó Bí thư Thường ứng Thành ủy TPHCM Lê Quốc Phong nhấn mạnh, việc triển khai sớm là để nhanh chóng đưa những định hướng chiến lược của Trung ương vào chương trình hành động của thành phố.",
