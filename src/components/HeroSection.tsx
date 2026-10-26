@@ -65,9 +65,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           <div className="w-24 h-1.5 bg-red-700 rounded-full mt-6" />
         </div>
 
-        {/* LTS / Editorial Note Text (Without header or background box or left line) */}
+        {/* LTS / Editorial Note Text */}
         {ARTICLE_DATA.lts && ARTICLE_DATA.lts.length > 0 && (
-          <div className="mb-8 space-y-4 font-body-serif italic text-stone-800 dark:text-stone-200 leading-relaxed text-base sm:text-lg py-1">
+          <div className="mb-8 space-y-4 font-body-serif italic text-stone-900 dark:text-stone-100 leading-relaxed text-base sm:text-lg py-1">
             {ARTICLE_DATA.lts.map((p, idx) => (
               <p key={idx}>
                 {p}
