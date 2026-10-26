@@ -217,13 +217,16 @@ export const SectionViewer: React.FC<SectionViewerProps> = ({
                 {section.id === 'section-4' && idx === 0 && (
                   <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen my-10 overflow-hidden border-0">
                     <div 
-                      className="w-full cursor-pointer"
-                      onClick={() => setActiveModalImg('/assets/aistudio/Cvien_LeThirieng_30146db4.jpg')}
+                      className="w-full"
                     >
                       <img 
                         src="/assets/aistudio/Cvien_LeThirieng_30146db4.jpg" 
                         alt="Các hoạt động trong chiến dịch đền ơn, đáp nghĩa" 
-                        className="w-full h-auto max-h-[85vh] object-cover border-0 p-0 m-0 rounded-none block"
+                        className="w-full h-auto max-h-[85vh] object-cover border-0 p-0 m-0 rounded-none block cursor-pointer"
+                        onClick={() => {
+                          console.log("Section 4 image clicked");
+                          setActiveModalImg('/assets/aistudio/Cvien_LeThirieng_30146db4.jpg');
+                        }}
                       />
                     </div>
                   </div>
