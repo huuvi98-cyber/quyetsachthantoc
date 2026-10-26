@@ -42,7 +42,7 @@ export interface ArticleData {
 }
 
 export const ARTICLE_DATA: ArticleData = {
-  seriesTitle: "HÒA NHỊP HÀNH ĐỘNG: “LÀM VÀ LÀM ĐÚNG, LÀM QUYẾT LIỆT, HIỆU QUẢ”",
+  seriesTitle: "HÒA NHỊP HÀNH ĐỘNG “LÀM VÀ LÀM ĐÚNG, LÀM QUYẾT LIỆT, HIỆU QUẢ”",
   title: "Bài 1: Quyết sách thần tốc đạt kết quả vì nói đi đôi với làm",
   publication: "E-MAGAZINE SPECIAL",
   category: "LONGFORM • THỜI SỰ - CHÍNH TRỊ",
