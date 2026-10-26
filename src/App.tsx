@@ -17,11 +17,14 @@ export default function App() {
   // Font size class mapping
   const fontSizeClass = fontSize === 'sm' ? 'text-base' : fontSize === 'lg' ? 'text-xl' : 'text-lg';
 
-  // Apply theme class to document body
+  // Apply theme class to document body and documentElement
   useEffect(() => {
     document.body.className = '';
+    document.documentElement.classList.remove('dark');
+
     if (theme === 'night') {
       document.body.classList.add('bg-[#12100E]', 'text-[#E7E5E4]', 'dark');
+      document.documentElement.classList.add('dark');
     } else if (theme === 'clean') {
       document.body.classList.add('bg-white', 'text-[#0A0A0A]');
     } else {
