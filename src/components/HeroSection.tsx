@@ -113,20 +113,23 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       {/* Full-Screen Image Modal */}
       {activeModalImg && (
         <div 
-          className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4"
+          className="fixed inset-0 z-[100] bg-white flex justify-center p-2 sm:p-6 overflow-y-auto"
           onClick={() => setActiveModalImg(null)}
         >
-          <button 
-            className="absolute top-6 right-6 text-white/80 hover:text-white p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
-            onClick={() => setActiveModalImg(null)}
-          >
-            <X className="w-6 h-6" />
-          </button>
-          <img 
-            src={activeModalImg} 
-            alt="Phóng to hình ảnh" 
-            className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
-          />
+          <div className="relative w-full max-w-7xl pt-16">
+            <button 
+              onClick={() => setActiveModalImg(null)}
+              className="fixed top-4 right-4 p-3 rounded-full bg-stone-200 text-stone-800 hover:bg-stone-300 transition-colors z-20 border-0"
+              title="Đóng"
+            >
+              <X className="w-6 h-6" />
+            </button>
+            <img 
+              src={activeModalImg} 
+              alt="Enlarged view" 
+              className="w-full h-auto object-contain border-0 shadow-none rounded-none"
+            />
+          </div>
         </div>
       )}
     </section>

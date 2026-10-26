@@ -217,16 +217,13 @@ export const SectionViewer: React.FC<SectionViewerProps> = ({
                 {section.id === 'section-4' && idx === 0 && (
                   <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen my-10 overflow-hidden border-0">
                     <div 
-                      className="w-full"
+                      className="w-full cursor-pointer"
+                      onClick={() => setActiveModalImg('/assets/aistudio/Cvien_LeThirieng_30146db4.jpg')}
                     >
                       <img 
                         src="/assets/aistudio/Cvien_LeThirieng_30146db4.jpg" 
                         alt="Các hoạt động trong chiến dịch đền ơn, đáp nghĩa" 
                         className="w-full h-auto max-h-[85vh] object-cover border-0 p-0 m-0 rounded-none block cursor-pointer"
-                        onClick={() => {
-                          console.log("Section 4 image clicked");
-                          setActiveModalImg('/assets/aistudio/Cvien_LeThirieng_30146db4.jpg');
-                        }}
                       />
                     </div>
                   </div>
@@ -292,13 +289,13 @@ export const SectionViewer: React.FC<SectionViewerProps> = ({
         {/* Modal Viewer for Full Size Image */}
         {activeModalImg && (
           <div 
-            className="fixed inset-0 z-[100] bg-black/92 backdrop-blur-md flex items-center justify-center p-2 sm:p-6"
+            className="fixed inset-0 z-[100] bg-white flex justify-center p-2 sm:p-6 overflow-y-auto"
             onClick={() => setActiveModalImg(null)}
           >
-            <div className="relative w-full h-full flex items-center justify-center max-w-7xl max-h-[92vh]">
+            <div className="relative w-full max-w-7xl pt-16">
               <button 
                 onClick={() => setActiveModalImg(null)}
-                className="absolute top-4 right-4 p-3 rounded-full bg-black/60 text-white hover:bg-red-600 transition-colors z-20 border-0"
+                className="fixed top-4 right-4 p-3 rounded-full bg-stone-200 text-stone-800 hover:bg-stone-300 transition-colors z-20 border-0"
                 title="Đóng"
               >
                 <X className="w-6 h-6" />
@@ -306,7 +303,7 @@ export const SectionViewer: React.FC<SectionViewerProps> = ({
               <img 
                 src={activeModalImg} 
                 alt="Enlarged view" 
-                className="max-w-full max-h-full object-contain border-0 shadow-none rounded-none"
+                className="w-full h-auto object-contain border-0 shadow-none rounded-none"
               />
             </div>
           </div>
