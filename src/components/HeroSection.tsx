@@ -51,15 +51,15 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             {ARTICLE_DATA.seriesTitle}
           </div>
 
-          <div className="text-base sm:text-lg md:text-xl font-sans-ui font-bold text-black/50 dark:text-white/50 tracking-widest uppercase pt-3 pb-6">
+          <div className="text-base sm:text-lg md:text-xl font-sans-ui font-bold text-black/60 dark:text-stone-200 tracking-widest uppercase pt-3 pb-6">
             BÀI 1:
           </div>
 
           <h1 className="font-sans-ui font-black uppercase tracking-tight text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-[1.32]">
             <span className="block py-0.5 text-stone-900 dark:text-stone-100">QUYẾT SÁCH</span>
             <span className="block py-0.5 text-stone-900 dark:text-stone-100">THẦN TỐC</span>
-            <span className="block py-0.5 text-red-800 dark:text-red-500">ĐẠT KẾT QUẢ VÌ</span>
-            <span className="block py-0.5 text-red-800 dark:text-red-500">NÓI ĐI ĐÔI VỚI LÀM</span>
+            <span className="block py-0.5 text-red-800 dark:text-red-400">ĐẠT KẾT QUẢ VÌ</span>
+            <span className="block py-0.5 text-red-800 dark:text-red-400">NÓI ĐI ĐÔI VỚI LÀM</span>
           </h1>
 
           <div className="w-24 h-1.5 bg-red-700 rounded-full mt-6" />
@@ -95,8 +95,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             ))}
           </div>
           <div className="bg-white dark:bg-stone-900 py-3.5 px-4 text-center rounded-xl border border-stone-200 dark:border-stone-800 max-w-4xl mx-auto shadow-xs">
-            <p className="font-sans-ui text-xs sm:text-sm text-stone-600 dark:text-stone-300 italic tracking-wide">
-              Tổng Bí thư, Chủ tịch nước Tô Lâm cùng các em học sinh tại lễ khánh thành Trường phổ thông dân tộc nội trú liên cấp tiểu học, THCS Si Pa Phìn (Điện Biên). <span className="not-italic font-sans-ui text-[11px] font-medium text-stone-500 dark:text-stone-400">Ảnh: TTXVN</span>
+            <p className="font-sans-ui text-xs sm:text-sm text-stone-700 dark:text-stone-200 italic tracking-wide">
+              Tổng Bí thư, Chủ tịch nước Tô Lâm cùng các em học sinh tại lễ khánh thành Trường phổ thông dân tộc nội trú liên cấp tiểu học, THCS Si Pa Phìn (Điện Biên). <span className="not-italic font-sans-ui text-[11px] font-medium text-stone-500 dark:text-stone-300">Ảnh: TTXVN</span>
             </p>
           </div>
         </div>

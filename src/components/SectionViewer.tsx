@@ -72,17 +72,15 @@ export const SectionViewer: React.FC<SectionViewerProps> = ({
         </div>
 
         {/* Render Paragraphs & Injected Components cleanly */}
-        <div className="space-y-8 font-body-serif leading-relaxed text-stone-800 dark:text-stone-200">
+        <div className="space-y-8 font-body-serif leading-relaxed text-stone-900 dark:text-stone-100">
           
           {section.paragraphs.map((para, idx) => {
             return (
               <React.Fragment key={idx}>
                 {/* Paragraph Text */}
-                <p className={`${fontSizeClass} leading-[1.8] text-stone-800 dark:text-stone-200 ${section.id === 'section-4' ? 'italic' : ''}`}>
+                <p className={`${fontSizeClass} leading-[1.8] text-stone-900 dark:text-stone-100 ${section.id === 'section-4' ? 'italic' : ''}`}>
                   {para}
                 </p>
-
-
 
                 {/* Inject Full-Screen Muong Khuong school image after paragraph 2 (idx === 1) in section-1 */}
                 {section.id === 'section-1' && idx === 1 && (
@@ -98,7 +96,7 @@ export const SectionViewer: React.FC<SectionViewerProps> = ({
                       />
                     </div>
                     <div className="bg-stone-100/80 dark:bg-stone-900 py-3.5 px-4 text-center border-0">
-                      <p className="font-sans-ui text-xs sm:text-sm text-stone-600 dark:text-stone-300 italic tracking-wide max-w-4xl mx-auto px-4">
+                      <p className="font-sans-ui text-xs sm:text-sm text-stone-700 dark:text-stone-200 italic tracking-wide max-w-4xl mx-auto px-4">
                         Trường Phổ thông nội trú Tiểu học - THCS Mường Khương là một trong 107 trường nội trú liên cấp ở biên giới được đưa vào hoạt động từ năm học 2026-2027. Ảnh: NGUYỄN MẠNH
                       </p>
                     </div>
@@ -124,7 +122,7 @@ export const SectionViewer: React.FC<SectionViewerProps> = ({
                       />
                     </div>
                     <div className="bg-white dark:bg-stone-900 py-3.5 px-4 text-center border-0">
-                      <p className="font-sans-ui text-xs sm:text-sm text-stone-600 dark:text-stone-300 italic tracking-wide">
+                      <p className="font-sans-ui text-xs sm:text-sm text-stone-700 dark:text-stone-200 italic tracking-wide">
                         Ảnh: HOÀNG TRIỀU
                       </p>
                     </div>
@@ -158,10 +156,6 @@ export const SectionViewer: React.FC<SectionViewerProps> = ({
                   </div>
                 )}
 
-
-
-
-
                 {/* Inject Quote Boxes for Tran Ngoc Lam and Nguyen Van Than after paragraph 4 (idx === 3) in section-3 */}
                 {section.id === 'section-3' && idx === 3 && (
                   <div className="space-y-8 my-10">
@@ -174,7 +168,7 @@ export const SectionViewer: React.FC<SectionViewerProps> = ({
                         <h4 className="font-sans-ui font-black text-stone-900 dark:text-stone-100 text-base sm:text-lg uppercase tracking-wide">
                           Ông TRẦN NGỌC LÂM
                         </h4>
-                        <p className="font-sans-ui text-xs sm:text-sm text-stone-600 dark:text-stone-300 font-medium leading-snug">
+                        <p className="font-sans-ui text-xs sm:text-sm text-stone-700 dark:text-stone-200 font-medium leading-snug">
                           Bí thư Chi bộ, Hiệu trưởng Trường THCS Văn Lang (phường Tân Định, TPHCM)
                         </p>
                       </div>
@@ -182,7 +176,7 @@ export const SectionViewer: React.FC<SectionViewerProps> = ({
                         <h5 className="font-sans-ui font-bold text-red-700 dark:text-red-400 text-lg sm:text-xl mb-3 leading-snug">
                           Ấn tượng với tốc độ cụ thể hóa nghị quyết
                         </h5>
-                        <p className="font-body-serif text-stone-800 dark:text-stone-200 text-base sm:text-lg leading-relaxed italic">
+                        <p className="font-body-serif text-stone-900 dark:text-stone-100 text-base sm:text-lg leading-relaxed italic">
                           “Tôi đặc biệt ấn tượng với tốc độ khẩn trương và phương pháp quán triệt, triển khai của các nghị quyết Trung ương của Thành ủy TPHCM trong thời gian qua. Việc học tập nghị quyết gắn sát sườn với nhiệm vụ của từng cơ quan, đơn vị. Cách làm này giúp cán bộ, đảng viên sau khi học tập nghị quyết đều hình dung rõ, đơn vị mình phải bắt tay thực hiện những việc gì, lộ trình ra sao và chịu trách nhiệm về sản phẩm đầu ra như thế nào trong thời gian tới.”
                         </p>
                       </div>
@@ -197,7 +191,7 @@ export const SectionViewer: React.FC<SectionViewerProps> = ({
                         <h4 className="font-sans-ui font-black text-stone-900 dark:text-stone-100 text-base sm:text-lg uppercase tracking-wide">
                           Ông NGUYỄN VĂN THÂN
                         </h4>
-                        <p className="font-sans-ui text-xs sm:text-sm text-stone-600 dark:text-stone-300 font-medium leading-snug">
+                        <p className="font-sans-ui text-xs sm:text-sm text-stone-700 dark:text-stone-200 font-medium leading-snug">
                           Chủ tịch Hiệp hội Doanh nghiệp nhỏ và vừa Việt Nam
                         </p>
                       </div>
@@ -205,7 +199,7 @@ export const SectionViewer: React.FC<SectionViewerProps> = ({
                         <h5 className="font-sans-ui font-bold text-blue-700 dark:text-blue-400 text-lg sm:text-xl mb-3 leading-snug">
                           Chính sách nhạy bén gỡ khó cho doanh nghiệp
                         </h5>
-                        <p className="font-body-serif text-stone-800 dark:text-stone-200 text-base sm:text-lg leading-relaxed italic">
+                        <p className="font-body-serif text-stone-900 dark:text-stone-100 text-base sm:text-lg leading-relaxed italic">
                           “Cộng đồng doanh nghiệp nhỏ và vừa cùng các hộ kinh doanh rất vui mừng, trân trọng cảm ơn sự quyết liệt của Chính phủ, Thủ tướng và Quốc hội. Ngay từ đầu nhiệm kỳ, Chính phủ đã trình Quốc hội thông qua việc nâng ngưỡng doanh thu không phải nộp thuế cho hộ kinh doanh từ 100 triệu đồng/năm lên 1 tỷ đồng/năm và tiếp đó là nghị quyết giảm 30% số thuế thu nhập cá nhân và số thuế thu nhập doanh nghiệp phải nộp của kỳ tính thuế năm 2026 và 2027. Điều đó cho thấy, Chính phủ đã hết sức nhạy bén trong việc tìm ra những điểm nghẽn và chủ động tháo gỡ. Để đạt mục tiêu tăng trưởng kinh tế 10% trở lên, các đường lối, chính sách đã khá toàn diện và đầy đủ. Tâm thế của cộng đồng doanh nghiệp hiện nay là: hành động quyết liệt để quyết tâm đóng góp vào mục tiêu tăng trưởng.”
                         </p>
                       </div>
