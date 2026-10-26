@@ -106,11 +106,11 @@ export const ARTICLE_DATA: ArticleData = {
       ],
       stats: [
         { value: "20 ngày", label: "Quy trình từ chỉ đạo đến thông qua", context: "Kỷ kỷ thần tốc phản ứng chính sách thuế" },
-        { value: "30%", label: "Mức giảm thuế TNCN & TNDN", context: "Cho cá nhân, doanh nghiệp doanh thu ≤ 10 tỷ/năm" },
+        { value: "30%", label: "Mức giảm thuế TNCN và TNDN", context: "Cho cá nhân, doanh nghiệp doanh thu ≤ 10 tỷ/năm" },
         { value: "17 ngày", label: "Thời gian Kỳ họp không thường lệ XVI", context: "Thông qua 15 luật và 6 nghị quyết quy phạm" }
       ],
       timelineData: [
-        { date: "03-08-2026", title: "Thủ tướng chỉ đạo Bộ Tài chính", description: "Thủ tướng Lê Minh Hưng yêu cầu đề xuất giải pháp thuế hỗ trợ doanh nghiệp & hộ kinh doanh." },
+        { date: "03-08-2026", title: "Thủ tướng chỉ đạo Bộ Tài chính", description: "Thủ tướng Lê Minh Hưng yêu cầu đề xuất giải pháp thuế hỗ trợ doanh nghiệp và hộ kinh doanh." },
         { date: "21-08-2026", title: "Chính phủ trình bổ sung", description: "Chỉ 3 ngày trước bế mạc kỳ họp, Chính phủ trình dự thảo theo thủ tục rút gọn." },
         { date: "Tháng 8-2026", title: "Quốc hội bấm nút thông qua", description: "Ban hành Nghị quyết có hiệu lực ngay trong Quý 3-2026 cho hàng triệu hộ kinh doanh." },
         { date: "Từ 04/2026 - nay", title: "Đã xử lý vướng mắc 2.535 dự án", description: "Từ tháng 4/2026 đến nay đã xử lý vướng mắc cho 2.535 dự án (đưa vào sử dụng 86,6 nghìn ha; khơi thông nguồn vốn trên 1,76 triệu tỷ đồng), nâng tổng số dự án được tháo gỡ lên 3.557 dự án." }

@@ -379,7 +379,7 @@ export const Infographics: React.FC<InfographicProps> = ({ type, theme }) => {
                 Mô Hình Địa Phương Hành Động
               </span>
               <h3 className="font-serif-display text-xl sm:text-2xl font-bold">
-                TPHCM: Cơ chế “Chạy song song” & Chỉ số KPI phụng sự Nhân dân
+                TPHCM: Cơ chế “Chạy song song” và Chỉ số KPI phụng sự Nhân dân
               </h3>
             </div>
           </div>

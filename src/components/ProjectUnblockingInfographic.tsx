@@ -87,25 +87,14 @@ export const ProjectUnblockingInfographic: React.FC<ProjectUnblockingInfographic
       key={animKey}
       className="w-full my-10 font-sans select-none relative max-w-[1360px] mx-auto px-2 sm:px-4"
     >
-      {/* Header Bar & Replay Button */}
-      <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8 pb-4 border-b border-stone-200 dark:border-stone-800">
-        <div>
-          <span className="font-mono text-xs uppercase font-extrabold tracking-widest text-sky-700 dark:text-sky-400 bg-sky-100 dark:bg-sky-950/80 px-3.5 py-1 rounded-full inline-block mb-2 shadow-xs">
-            TỪ THÁNG 4 ĐẾN NAY
-          </span>
-          <h3 className="font-serif-display font-black text-xl sm:text-2xl md:text-3xl text-stone-900 dark:text-stone-100 tracking-tight uppercase">
-            KẾT QUẢ THÁO GỠ VƯỚNG MẮC CHO CÁC DỰ ÁN
-          </h3>
-        </div>
-
-        <button
-          onClick={replayAnimation}
-          className="px-3 py-1.5 rounded-lg bg-stone-100 hover:bg-stone-200 dark:bg-stone-800 dark:hover:bg-stone-700 text-stone-700 dark:text-stone-300 transition-colors text-xs font-semibold flex items-center gap-1.5 border border-stone-300 dark:border-stone-700 shadow-2xs shrink-0"
-          title="Phát lại hiệu ứng đếm số"
-        >
-          <RotateCcw className="w-3.5 h-3.5 text-sky-600 dark:text-sky-400" />
-          <span>Phát lại con số</span>
-        </button>
+      {/* Header Bar */}
+      <div className="flex flex-col items-center justify-center text-center mb-8 pb-4 border-b border-stone-200 dark:border-stone-800">
+        <span className="font-mono text-xs uppercase font-extrabold tracking-widest text-sky-700 dark:text-sky-400 bg-sky-100 dark:bg-sky-950/80 px-3.5 py-1 rounded-full inline-block mb-3 shadow-xs">
+          TỪ THÁNG 4 ĐẾN NAY
+        </span>
+        <h3 className="font-serif-display font-black text-lg sm:text-xl md:text-2xl lg:text-3xl text-stone-900 dark:text-stone-100 tracking-tight uppercase text-center font-bold">
+          KẾT QUẢ THÁO GỠ VƯỚNG MẮC CHO CÁC DỰ ÁN
+        </h3>
       </div>
 
       {/* 4 PAPER-FOLD ARROW RIBBON CARDS (4 CỤM) */}
@@ -152,7 +141,7 @@ export const ProjectUnblockingInfographic: React.FC<ProjectUnblockingInfographic
               </div>
 
               <h4 className="font-sans font-extrabold text-stone-900 dark:text-stone-100 text-sm tracking-wider uppercase mb-4">
-                SỬ DỤNG ĐẤT & KHƠI THÔNG VỐN
+                SỬ DỤNG ĐẤT VÀ KHƠI THÔNG VỐN
               </h4>
             </div>
 
@@ -357,7 +346,7 @@ export const ProjectUnblockingInfographic: React.FC<ProjectUnblockingInfographic
               </div>
 
               <h4 className="font-sans font-extrabold text-stone-900 dark:text-stone-100 text-sm tracking-wider uppercase mb-4">
-                TỔNG QUY MÔ ĐẤT ĐAI & ĐẦU TƯ
+                TỔNG QUY MÔ ĐẤT ĐAI VÀ ĐẦU TƯ
               </h4>
             </div>
 
