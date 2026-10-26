@@ -289,7 +289,7 @@ export const SectionViewer: React.FC<SectionViewerProps> = ({
         {/* Modal Viewer for Full Size Image */}
         {activeModalImg && (
           <div 
-            className="fixed inset-0 z-50 bg-black/92 backdrop-blur-md flex items-center justify-center p-2 sm:p-6"
+            className="fixed inset-0 z-[100] bg-black/92 backdrop-blur-md flex items-center justify-center p-2 sm:p-6"
             onClick={() => setActiveModalImg(null)}
           >
             <div className="relative w-full h-full flex items-center justify-center max-w-7xl max-h-[92vh]">
